@@ -7,5 +7,8 @@ public class GerenciadorUsuarios {
     public void adicionarUsuario(Usuario u) {
         usuarios.add(u);
     }
+    public ArrayList<Usuario> getUsuarios() {
+        return usuarios;
+    }
 }
 

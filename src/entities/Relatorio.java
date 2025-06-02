@@ -1,12 +1,13 @@
 package entities;
 
-public class Relatorio {
+import java.util.List;
 
-    public void gerarRelatorioUsuario(Usuario u) {
-        System.out.println("Relatório do Usuário:");
-        System.out.println("Nome: " + u.nome);
-        System.out.println("Idade: " + u.idade);
-        System.out.println("Conta: " + u.conta.numeroConta);
-        System.out.println("Saldo: " + u.conta.saldo);
+public class Relatorio{
+
+    public void gerarRelatorioUsuario(GerenciadorUsuarios g) {
+        System.out.println("Relatório de Usuários:");
+        for (Usuario u : g.getUsuarios()) {
+            System.out.println(u);
+        }
     }
 }
