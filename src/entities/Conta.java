@@ -10,10 +10,22 @@ public class Conta {
     }
 
     public void depositar(double valor) {
-        saldo = saldo + valor; // Sem validação para valor negativo
+        if (valor < 0){
+            System.out.println("ERRO: Valor precisa ser maior que zero!");
+        }
+        saldo += valor;
+
     }
     public void sacar(double valor) {
-        saldo = saldo - valor; // Sem validação para saldo insuficiente ou valor negativo
+        if (valor < 0){
+            System.out.println("ERRO: Valor precisa ser maior que zero!");
+        }else {
+            if (valor > saldo){
+                System.out.println("ERRO: Saldo insuficiente!");
+            }else{
+                saldo -= valor;
+            }
+        }
     }
 }
 
