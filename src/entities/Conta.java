@@ -1,12 +1,30 @@
 package entities;
 
 public class Conta {
-    public int numeroConta;
-    public double saldo;
+    private int numeroConta;
+    private double saldo;
 
+    public Conta() {
+    }
     public Conta(int numeroConta) {
         this.numeroConta = numeroConta;
         saldo = 0;
+    }
+
+    public int getNumeroConta() {
+        return numeroConta;
+    }
+
+    public void setNumeroConta(int numeroConta) {
+        this.numeroConta = numeroConta;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 
     public void depositar(double valor) {
