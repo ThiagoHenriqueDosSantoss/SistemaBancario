@@ -12,6 +12,7 @@ public class Usuario {
     public Usuario(String nome, int idade) {
         if (idade < 0){
             System.out.println("ERRO: Idade não pode ser um valor menor que zero!");
+            System.exit(0);
         }
             this.nome = nome;
             this.idade = idade;

@@ -29,17 +29,20 @@ public class Conta {
 
     public void depositar(double valor) {
         if (valor < 0){
-            System.out.println("ERRO: Valor precisa ser maior que zero!");
+            System.out.println("ERRO: Valor para deposito precisa ser maior que zero!");
+            System.exit(0);
         }
         saldo += valor;
 
     }
     public void sacar(double valor) {
         if (valor < 0){
-            System.out.println("ERRO: Valor precisa ser maior que zero!");
+            System.out.println("ERRO: Valor para saque precisa ser maior que zero!");
+            System.exit(0);
         }else {
             if (valor > saldo){
                 System.out.println("ERRO: Saldo insuficiente!");
+                System.exit(0);
             }else{
                 saldo -= valor;
             }
